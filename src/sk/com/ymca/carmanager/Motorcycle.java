@@ -5,7 +5,7 @@ public class Motorcycle {
     int yearOfProduction;
     int price;
     int weight;
-    String color;
+    Color color;
     String engineType;
     boolean isReadyToDrive;
 
@@ -15,7 +15,7 @@ public class Motorcycle {
         this.yearOfProduction = yearOfProduction;
         this.price = price;
         this.weight = weight;
-        this.color = color;
+        this.color = Color.valueOf(color.replaceAll("[*#!@~%^&()_+{}:\"<>?`1234567890-=\\[\\];',./]", "").toUpperCase());
         this.engineType = engineType;
         this.isReadyToDrive = isReadyToDrive;
     }
